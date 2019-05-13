@@ -1,0 +1,7 @@
+accounts.firefox.com:HSTS	0	18025	1572988218045,1,1,2
+www.mozilla.org:HSTS	0	18025	1588972217394,1,0,2
+mozilla.org:HSTS	0	18025	1588972216970,1,0,2
+shavar.services.mozilla.com^firstPartyDomain=safebrowsing.86868755-6b82-4842-b301-72671a0db32e.mozilla:HSTS	0	18025	1588972219189,1,1,2
+www.google.com:HSTS	0	18025	1588972306464,1,0,2
+www.google.co.cr:HSTS	0	18025	1588972237294,1,0,2
+www.google-analytics.com:HSTS	0	18025	1568322619387,1,1,2

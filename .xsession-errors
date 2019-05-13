@@ -1,0 +1,65 @@
+Xsession: X session started for dq at Mon May 13 09:13:27 CDT 2019
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting XAUTHORITY=/home/dq/.Xauthority
+localuser:dq being added to access control list
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+OpenGL version: 3.
+dbus-update-activation-environment: setting USER=dq
+dbus-update-activation-environment: setting XDG_SESSION_TYPE=x11
+dbus-update-activation-environment: setting HOME=/home/dq
+dbus-update-activation-environment: setting DESKTOP_SESSION=lightdm-xsession
+dbus-update-activation-environment: setting XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+dbus-update-activation-environment: setting LOGNAME=dq
+dbus-update-activation-environment: setting PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+dbus-update-activation-environment: setting GDM_LANG=en_US.utf8
+dbus-update-activation-environment: setting XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+dbus-update-activation-environment: setting XDG_RUNTIME_DIR=/run/user/1000
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting LANG=en_US.UTF-8
+dbus-update-activation-environment: setting XDG_SESSION_DESKTOP=lightdm-xsession
+dbus-update-activation-environment: setting XAUTHORITY=/home/dq/.Xauthority
+dbus-update-activation-environment: setting XDG_GREETER_DATA_DIR=/var/lib/lightdm/data/dq
+dbus-update-activation-environment: setting SHELL=/bin/bash
+dbus-update-activation-environment: setting GDMSESSION=lightdm-xsession
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+dbus-update-activation-environment: setting PWD=/home/dq
+dbus-update-activation-environment: setting XDG_DATA_DIRS=/usr/share/xfce4:/usr/local/share/:/usr/share/
+/usr/bin/x-session-manager: X server already running on display :0
+
+** (xfce4-session:696): CRITICAL **: polkit_unix_process_set_property: assertion 'val != -1' failed
+xfce4-session-Message: SSH authentication agent is already running
+gpg-agent[713]: WARNING: "--write-env-file" is an obsolete option - it has no effect
+gpg-agent: a gpg-agent is already running - not starting a new one
+
+(xfce4-session:696): xfce4-session-WARNING **: gpg-agent returned no PID in the variables
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+[898:898:0513/091401.378538:ERROR:sandbox_linux.cc(364)] InitializeSandbox() called with multiple threads in process gpu-process.
+[862:882:0513/091611.327971:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -118
+App load time: 1256ms
+
+(xfce4-terminal:1166): Gdk-CRITICAL **: gdk_window_get_window_type: assertion 'GDK_IS_WINDOW (window)' failed
+[862:911:0513/092519.813662:ERROR:cert_verify_proc_nss.cc(974)] CERT_PKIXVerifyCert for googleads.g.doubleclick.net failed err=-8172
+[862:882:0513/092519.814205:ERROR:ssl_client_socket_impl.cc(962)] handshake failed; returned -1, SSL error code 1, net_error -202
+[862:1412:0513/092528.509651:ERROR:cert_verify_proc_nss.cc(974)] CERT_PKIXVerifyCert for tpc.googlesyndication.com failed err=-8172
+[862:882:0513/092528.512670:ERROR:ssl_client_socket_impl.cc(962)] handshake failed; returned -1, SSL error code 1, net_error -202
+[862:882:0513/092528.790550:ERROR:ssl_client_socket_impl.cc(962)] handshake failed; returned -1, SSL error code 1, net_error -202
+[862:882:0513/092529.070176:ERROR:ssl_client_socket_impl.cc(962)] handshake failed; returned -1, SSL error code 1, net_error -202
+[862:882:0513/092529.074922:ERROR:ssl_client_socket_impl.cc(962)] handshake failed; returned -1, SSL error code 1, net_error -202
+[862:1352:0513/092530.303896:ERROR:cert_verify_proc_nss.cc(974)] CERT_PKIXVerifyCert for pagead2.googlesyndication.com failed err=-8172
+[862:882:0513/092530.304302:ERROR:ssl_client_socket_impl.cc(962)] handshake failed; returned -1, SSL error code 1, net_error -202
+[862:882:0513/092534.875427:ERROR:ssl_client_socket_impl.cc(962)] handshake failed; returned -1, SSL error code 1, net_error -202
+
+(xfce4-terminal:1478): Gdk-CRITICAL **: gdk_window_get_window_type: assertion 'GDK_IS_WINDOW (window)' failed
+
+(xfce4-terminal:1478): Gtk-WARNING **: Allocating size to GtkScrollbar 0x563822e88890 without calling gtk_widget_get_preferred_width/height(). How does the code know the size to allocate?
+
+(xfce4-terminal:1478): Gtk-WARNING **: Allocating size to GtkScrollbar 0x563822e88490 without calling gtk_widget_get_preferred_width/height(). How does the code know the size to allocate?
+
+(xfce4-terminal:1478): Gdk-CRITICAL **: gdk_window_get_window_type: assertion 'GDK_IS_WINDOW (window)' failed

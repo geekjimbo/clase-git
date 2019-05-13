@@ -1,0 +1,194 @@
+
+________________________________________
+
+UNIX
+OS
+
+LINUX
+OS basado en UNIX
+
+distribuciones LINUX
+LINUX kernel+apps que hacen al sistema usable
+c/u se conecta a package repositories, las apps disponibles dependen de la distro usada
+package manager=apt
+
+red hat:fedora+RHEL
+debian: debian+ubuntu
+_________________________________________
+
+SHELL
+case sensitive
+command arg1 ar2 arg3
+shell prompt: dq@debianVM: usuario "dq" esta en el servidor "debianVM" (nombre que le puse a la VM q corre debian)
+
+filesystem
+forma en como OS almacena archivos
+a c/u archivo le pone un label para organizarlo dentro de grupos/contenedores (directorios) en filesystem
+i.e. filesysytem es un conjunto de registros de todos los archivos, con info de: tipo de archivo, usuario q lo creo, tipos de acceso, posicion dentro de filesystem, inicio+fin del contenido
+_________________________________________
+
+directorios estan organizados de manera jerarquica, empezando por el directorio root "/" y bajando por subdirectorios hasta llegar al archivo en cuestion. i.e. c/u archivo es identificado por un path:
+/home/gm/mydata/bac1.seq
+_________________________________________
+pwd: ver directorio sobre el q esta actualmente
+_________________________________________
+directorio "home" directorio en el q el usuario siempre esta luego de iniciar sesion
+
+dq@debianVM:~$
+"~" simboliza q estoy en el directorio "home"
+dq@debianVM:~$ = dq@debianVM:/home/dq$
+_________________________________________
+navegar en filesystem
+
+cd: change directory
+dq@debianVM:~$ cd Desktop
+>>>dq@debianVM:~/Desktop$
+
+cd ..: devuelve 1 nivel arriba en la jerarquia, i.e. me devuelve al directorio anterior
+dq@debianVM:~/Desktop$ cd ..
+dq@debianVM:~$
+_________________________________________
+enlistar archivos
+ls: muestra lista de contenido del directorio
+ls -la: lista+detalles>tamanho file, permisos, etc.
+_________________________________________
+encontrar archivo
+find ~/ -type f -name "postgis-2.0.0" > busca file en todo el home directory, i.e. desde el root
+find . -type f -name "postgis-2.0.0"> busca el file solamente en el current directory
+sudo find / -type d -name "postgis-2.0.0"> con "sudo" hace q se busque tbn dentro de subfolders
+
+find ~/ -name "LinuxNotes.odt"
+/home/dq/Desktop/LinuxNotes.odt
+
+find ~/ -name Linux*
+>usar "*" cuando se sabe q el nombre del archivo tiene cierto string, el sistema hara match con ese string de todos los archivos q lo tengan
+_________________________________________
+permisos de archivos
+definen quien tiene permitido ver, modificar o ejecutar el archivo
+"ls -la" me da esa info
+r=read
+w=write
+x=execute
+
+files:
+-rw-r--r--  1 dq dq 13700 May 12 16:50 LinuxNotes.odt
+
+directorios:
+drwxr-xr-x  2 dq dq  4096 May 12 16:51 .
+>"d" indica que "." es un directorio
+
+cambiar permisos del file
+chmod [u|g|o (+|-) (r,w,x)] [filename, directoryname] 
+
+-rw-r--r--  1 dq dq 13700 May 12 16:50 LinuxNotes2.odt
+e.g. si quiero que el archivo anterior tenga solo permisos de read entonces hago:
+chmod u-w LinuxNotes2.odt
+* tambien se pueden remover +1 permiso al mismo tiempo:
+chmod u-wx LinuxNotes2.odt
+
+si quiero volver a agregarle el "write" entonces hago:
+chmod u+w LinuxNotes2.odt
+u: usuario propietario del file
+_________________________________________
+
+rm filename:borrar archivos
+rm LinuxNotes2.odt
+*files borrados no se pueden recuperar
+_________________________________________
+
+cat: ver contenido de archivos
+cat LinuxNotes.odt
+
+strings: remueve caracteres especiales al ver conteido de un archivo binario
+
+less/more: si file tiene tanta info q scroll no deja ver primeras lineas, entonces se usan estos comandos para q scroll se detiene cuando ventana de terminal se llena
+
+archivos libre office los toma como binarios, entonces hay que:
+1-bajar el package: sudo apt-get install odt2txt 
+2-ver contenido del archivo con:
+odt2txt LinuxNotes.odt
+
+head: obtiene info del inicio del archivo
+tail: recupera info del final del archivo
+head -3 LinuxNotes.odt: muestra las primeras 3 lineas del archivo
+tail -3 LinuxNotes.odt: muestra las ultimas 3 lineas del archivo
+_________________________________________
+
+mkdir: crear directorios
+
+cd Desktop
+mkdir Test
+cd Test
+ls
+_________________________________________
+
+rmdir: borra directorios vacios
+*sale error si se intenta borrar directorios q tengan algo adentro
+
+rm -r -f [directory name]
+-r: borrar directorio
+-f: fuerza a borrar aun si directorio tiene files
+
+*si directorio esta en Desktop, entonces hay q devolverse ahi y luego borrar el directorio "Test":
+cd Desktop
+rm -r -f Test/
+
+_________________________________________
+
+copiar files
+cp [sourcefilepath] [destfilepath]
+
+dentro de Desktop:
+cp LinuxNotes.odt LinuxNotes2.odt
+>copia el archivo dentro de Desktop, con nuevo nombre
+
+ls
+>me mostraria ambos files en Desktop
+
+copiar directorios
+cp -p -r pdfdoc/ pdfcopy/
+-p: preserva permisos
+-r: indica que se copien todos los sub-directorios de pdfdoc (copia recursiva)
+___________________________
+movere files
+
+mv sourcefilepath destfilepath
+
+mv xlrhodop.fasta myxlr.fasta
+remueve xlrhodop.fasta y lo re-genera con nuevo nombre dentro del mismo directorio
+___________________________
+
+ref
+
+man cat: built-in ref manual
+apropos list: lista de comandos q hacen listados
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
